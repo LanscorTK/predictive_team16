@@ -1,0 +1,4 @@
+Organise this section 4 clearly in the notebook using appropriate heading levels. Follow a readable flow in which markdown cells explain the work and code cells implement it.
+Using the cleaned dataframe “participation_clean” from the previous steps, define `X` and `y`.
+Create appropriate preprocessing pipelines for Logistic Regression and XGBoost respectively, including any necessary preprocessing such as one-hot encoding.
+Split the data into training, validation, and test sets in a 0.7 / 0.15 / 0.15 ratio. Account for target imbalance when performing the split.

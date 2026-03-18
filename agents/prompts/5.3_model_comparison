@@ -1,0 +1,6 @@
+Only at this stage, use the test set for prediction and final comparison.
+Compare the following models:
+- baseline Logistic Regression
+- tuned Logistic Regression
+- XGBoost
+Use the evaluation harness defined in the previous section to assess and compare model performance consistently.

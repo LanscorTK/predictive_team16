@@ -1,0 +1,9 @@
+Read the data file `participation_2024-25_experiment_v2.tab` into a pandas dataframe called participation_raw, and report its number of rows and columns.
+The dataset is expected to contain the following variables:
+`CARTS_NET, CHERVIS12_NET, EDUCAT3, NSSEC_3, FINHARD, WELLB1, CINTOFT, CSMARTD_Count, WELLB4, TENHARM, LONELY, ETHNIC_NET, emdidc19, CULTSATIS, SEX, AGEBAND`
+Perform appropriate schema checks for these variables and document in a markdown cell what checks were performed. At minimum, confirm that the required variables are present and check for any obvious schema issues relevant to this step.
+Create a markdown cell for this subsection that includes:
+- a level 1 heading
+- a level 2 heading
+- a short description of the work completed in this subsection
+Then create a code cell that implements this step.

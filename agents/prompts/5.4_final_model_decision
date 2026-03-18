@@ -1,0 +1,10 @@
+Taking into account the purpose of the prediction task, define a systematic, multi-dimensional, and quantitative model selection framework in a markdown cell.
+Clearly explain the selection criteria, then use this framework to choose the final model.
+For both tuned Logistic Regression and tuned XGBoost, print a structured tuning summary in the notebook. For each model, report:
+- tuning method used
+- hyperparameters searched
+- search range or candidate values for each hyperparameter
+- total number of parameter configurations evaluated
+- iteration or trial count completed
+- best hyperparameter setting found
+- best validation-set performance achieved under the predefined evaluation harness

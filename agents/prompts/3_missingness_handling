@@ -1,0 +1,6 @@
+In this dataset, missing values are not stored as `NaN`, but are often represented by negative codes. For this step, focus only on the feature variables, since the target variable has already been handled earlier. For variables with coded missing rates under 5%, consider dropping those rows. For CULTSATIS which has ~71% routing skips, treat -3 as its own informative category rather than missing.
+Using the variable dictionary `participation_2024-25_data_dictionary_v2.txt`, review the meanings of the coded values for each feature variable and determine how to handle values that do not carry useful information for modelling, such as missing, not applicable, or similar non-informative responses.
+You may need to define variable-specific missingness handling rules, depending on the missing rate and meanings of different coded values. Clearly explain these handling rules in markdown.
+Organise this section clearly in the notebook using appropriate heading levels. Follow a readable flow in which markdown cells explain the work and code cells implement it.
+Print necessary information, such as rows before and after cleaning.
+Conduct the missingness handling job on the data frame “participation_eda” created in the last section, and the expected output is a cleaned dataset “participation_clean”with no missing value, ready for encoding and training.

@@ -1,0 +1,3 @@
+Organise this section clearly in the notebook using appropriate heading levels. Follow a readable flow in which markdown cells explain the work and code cells implement it.
+Use exactly the same training, validation, and test split defined earlier.
+Tune the Logistic Regression model on the validation set only and identify the best-performing hyperparameter setting including threshold tuning. Consider using class_weight='balanced' or scale_pos_weight for handling imbalance, and explore threshold tuning systematically (e.g., optimise the threshold for F2 score on the validation set).

@@ -1,0 +1,8 @@
+Create a markdown cell with a level 2 heading defining the prediction task.
+The task is a binary classification task: predict whether a respondent engaged with the arts physically in the last 12 months.
+We frame this task as an under-engagement identification problem with social research value. Rather than treating arts participation as a purely individual preference, the task investigates whether non-participation is socially patterned across demographic, socioeconomic, digital, and geographic factors. The purpose is to identify groups that may face structural or contextual barriers to physical arts engagement, and to provide evidence for more inclusive cultural policy and public engagement strategies.
+Define:
+- target variable: `CARTS_NET`
+- feature variables: `CHERVIS12_NET, EDUCAT3, NSSEC_3, FINHARD, WELLB1, CINTOFT, CSMARTD_Count, WELLB4, TENHARM, LONELY, ETHNIC_NET, emdidc19, CULTSATIS, SEX, AGEBAND`
+Also state clearly in the markdown cell that for the target variable, rows with values `-3` and `3` will later be dropped as missing values so that the task becomes a binary classification problem. Do not drop them yet in this step.
+In the same markdown cell, include a table introducing all variables, based on the variable dictionary file `participation_2024-25_data_dictionary_v2.txt`.

@@ -1,0 +1,6 @@
+First, convert the target into a binary classification target for later use. Remove all rows where `CARTS_NET` takes values `-3` or `3`, as these are treated as missing target values. Do not recode the remaining target values to `0` and `1` yet.
+Create a copy of the data for subsequent steps: drop the original `CARTS_NET` column and add a new binary target variable to this new dataframe called participation_eda.
+Create a new folder named `EDA_[agent_name]_Pics` in the evidence folder created in section 0. Save all figures generated in this step as `.png` files in that folder.
+Perform appropriate exploratory data analysis for the prediction task, based on the variable definitions and roles. The EDA should generate useful data insights and must include suitable visualisations using appropriate graph types.
+Organise this section clearly in the notebook using markdown and code cells. Include correct heading levels and add subheadings where helpful. Follow a readable flow in which markdown cells explain the work and code cells implement it.
+Do not perform any modelling, training, or model evaluation in this step.

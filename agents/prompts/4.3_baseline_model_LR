@@ -1,0 +1,2 @@
+Train a baseline Logistic Regression model. Choose reasonable baseline hyperparameters based on standard practice, without extensive tuning.
+Evaluate the model on the validation set only, using the predefined evaluation harness and present the results clearly.

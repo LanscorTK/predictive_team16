@@ -1,0 +1,2 @@
+Use exactly the same training, validation, and test split defined earlier.
+Train an XGBoost model and tune it on the validation set only to identify the best-performing hyperparameter setting including threshold tuning. Consider using class_weight='balanced' or scale_pos_weight for handling imbalance, and explore threshold tuning systematically (e.g., optimise the threshold for F2 score on the validation set).

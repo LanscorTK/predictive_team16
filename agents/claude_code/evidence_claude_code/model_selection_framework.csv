@@ -1,0 +1,4 @@
+Model,Recall (weighted),F2 (weighted),Balanced Accuracy (weighted),ROC-AUC (weighted),Interpretability (weighted),Total Score
+Baseline LR,0.0346,0.0348,0.1113,0.1245,0.1,0.4052
+Tuned LR,0.2307,0.1129,0.1489,0.1244,0.1,0.7169
+Tuned XGBoost,0.0564,0.0529,0.1169,0.1194,0.05,0.3957

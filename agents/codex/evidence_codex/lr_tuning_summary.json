@@ -1,0 +1,46 @@
+{
+  "model": "tuned_logistic_regression",
+  "tuning_method": "manual grid search on validation split + threshold optimisation",
+  "hyperparameters_searched": [
+    "C",
+    "penalty",
+    "class_weight",
+    "threshold"
+  ],
+  "search_range": {
+    "C": [
+      0.01,
+      0.05,
+      0.1,
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "penalty": [
+      "l1",
+      "l2"
+    ],
+    "class_weight": [
+      "None",
+      "balanced"
+    ],
+    "threshold": "0.05 to 0.95 (step 0.01)"
+  },
+  "total_parameter_configurations": 28,
+  "iteration_or_trial_count_completed": 28,
+  "best_hyperparameter_setting": {
+    "C": 0.05,
+    "penalty": "l1",
+    "class_weight": "balanced",
+    "threshold": 0.5199999999999999
+  },
+  "best_validation_performance": {
+    "f2": 0.5086206896551724,
+    "recall": 0.7814569536423841,
+    "precision": 0.21223021582733814,
+    "pr_auc": 0.34624003992034375,
+    "roc_auc": 0.8509299669283272,
+    "balanced_accuracy": 0.7825001595491387
+  }
+}

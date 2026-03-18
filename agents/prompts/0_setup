@@ -1,0 +1,23 @@
+Work in ./agents/[agent_name] and NOWHERE ELSE. Assume the following files are available in ./data:
+1. Variable dictionary: participation_2024-25_data_dictionary_v2.txt
+2. Data file: participation_2024-25_experiment_v2.tab
+Read the variable dictionary to understand the meanings of the variables and their coded values (just try to understand, no need creating note in the notebook). Do not load the data file yet in this step.
+Create a Jupyter Notebook named `experiment_[agent_name].ipynb`.
+Add a markdown cell at the top of the notebook containing the main title: # Experiment: [agent_name] and the name of this section, with correct level.
+Set the global random seed to 42. Use `random_state=42` in all later steps whenever randomness is involved, to ensure reproducibility.
+Use only relative paths. Read all inputs from the current directory and save all outputs to the current directory.
+Ensure the notebook can run sequentially from top to bottom without any manual intervention.
+Also set up the following experiment-tracking structure in the current directory:
+- a run log file named `run_log_[agent_name].md`
+- an evidence folder named `evidence_[agent_name]`
+Use the run log to record progress step by step throughout the experiment. For each major step, record:
+- step name
+- completion status
+- key actions
+- key outputs
+- important warnings or errors, if any
+Save all major output files generated during the experiment in the evidence folder, unless a later step specifies a different required location.
+If any failure prevents reliable continuation of the pipeline, mark it clearly in the run log as `EARLY FAILURE`, and state:
+- which step failed
+- the reason for failure
+- which later steps were affected

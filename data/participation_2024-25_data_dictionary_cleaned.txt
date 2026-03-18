@@ -1,0 +1,149 @@
+UK Data Archive Data Dictionary
+
+File-level information:
+
+File Name = 		participation_2024-25_annual_data_open
+Number of cases = 	34378
+
+
+Variable-level information:
+
+Pos. = 1,175	Variable = CARTS_NET	Variable label = In the last 12 months, engaged (attended OR participated) with the arts physically
+This variable is    numeric, the SPSS measurement level is NOMINAL
+SPSS user missing values = -1.7976931348623155e+308 thru -1.0
+	Value label information for CARTS_NET
+	Value = -3.0	Label = Not applicable
+	Value = 1.0	Label = Yes
+	Value = 2.0	Label = No
+	Value = 3.0	Label = No & Missing
+
+Pos. = 1,308	Variable = AGEBAND	Variable label = Respondent age band (ALL)
+This variable is    numeric, the SPSS measurement level is SCALE
+	Value label information for AGEBAND
+	Value = -3.0	Label = Not Applicable
+	Value = 1.0	Label = 16 to 19
+	Value = 2.0	Label = 20 to 24
+	Value = 3.0	Label = 25 to 29
+	Value = 4.0	Label = 30 to 34
+	Value = 5.0	Label = 35 to 39
+	Value = 6.0	Label = 40 to 44
+	Value = 7.0	Label = 45 to 49
+	Value = 8.0	Label = 50 to 54
+	Value = 9.0	Label = 55 to 59
+	Value = 10.0	Label = 60 to 64
+	Value = 11.0	Label = 65 to 69
+	Value = 12.0	Label = 70 to 74
+	Value = 13.0	Label = 75 to 79
+	Value = 14.0	Label = 80 to 84
+	Value = 15.0	Label = 85 or over
+	Value = 997.0	Label = Prefer not to say
+
+Pos. = 12	Variable = SEX	Variable label = SEX. Respondent gender
+This variable is    numeric, the SPSS measurement level is NOMINAL
+SPSS user missing values = -1.7976931348623155e+308 thru -1.0
+	Value label information for SEX
+	Value = -5.0	Label = Multi-selected for single response (paper)
+	Value = -4.0	Label = Not answered but should have (paper)
+	Value = -3.0	Label = Not Answered
+	Value = 1.0	Label = Female
+	Value = 2.0	Label = Male
+	Value = 997.0	Label = Prefer not to say
+
+Pos. = 1,150	Variable = QWORK	Variable label = QWORK. What is your current working status
+This variable is    numeric, the SPSS measurement level is NOMINAL
+SPSS user missing values = -1.7976931348623155e+308 thru -1.0
+	Value label information for QWORK
+	Value = -5.0	Label = Multi-selected for single response (paper)
+	Value = -4.0	Label = Not answered but should have (paper)
+	Value = -3.0	Label = Not Answered
+	Value = 1.0	Label = Working full time (30+ hours a week)
+	Value = 2.0	Label = Working part time (less than 30 hours a week)
+	Value = 3.0	Label = On government supported training or still in education
+	Value = 4.0	Label = Unemployed and available for work
+	Value = 5.0	Label = On maternity or paternity leave
+	Value = 6.0	Label = Retired and not working at all
+	Value = 8.0	Label = Looking after home or family
+	Value = 9.0	Label = Permanently sick or disabled
+	Value = 10.0	Label = Doing something else
+	Value = 997.0	Label = Prefer not to say
+	Value = 999.0	Label = Don't know
+
+Pos. = 1,159	Variable = EDUCAT3	Variable label = EDUCAT3. What is your highest qualification
+This variable is    numeric, the SPSS measurement level is NOMINAL
+SPSS user missing values = -1.7976931348623155e+308 thru -1.0
+	Value label information for EDUCAT3
+	Value = -5.0	Label = Multi-selected for single response (paper)
+	Value = -4.0	Label = Not answered but should have (paper)
+	Value = -3.0	Label = Not Answered
+	Value = 1.0	Label = Degree level or above
+	Value = 2.0	Label = Another kind of qualification
+	Value = 997.0	Label = Prefer not to say
+	Value = 999.0	Label = Don’t know
+
+Pos. = 1,161	Variable = FINHARD	Variable label = FINHARD. How well would you say you are managing financially these days
+This variable is    numeric, the SPSS measurement level is NOMINAL
+SPSS user missing values = -1.7976931348623155e+308 thru -1.0
+	Value label information for FINHARD
+	Value = -5.0	Label = Multi-selected for single response (paper)
+	Value = -4.0	Label = Not answered but should have (paper)
+	Value = -3.0	Label = Not Answered
+	Value = 1.0	Label = Living comfortably
+	Value = 2.0	Label = Doing alright
+	Value = 3.0	Label = Just about getting by
+	Value = 4.0	Label = Finding it quite difficult
+	Value = 5.0	Label = Finding it very difficult
+	Value = 997.0	Label = Prefer not to say
+
+Pos. = 925	Variable = CINTOFT	Variable label = CINTOFT. How often do you use the internet
+This variable is    numeric, the SPSS measurement level is NOMINAL
+SPSS user missing values = -1.7976931348623155e+308 thru -1.0
+	Value label information for CINTOFT
+	Value = -5.0	Label = Multi-selected for single response (paper)
+	Value = -4.0	Label = Not answered but should have (paper)
+	Value = -3.0	Label = Not Answered
+	Value = 1.0	Label = Almost all the time
+	Value = 2.0	Label = Many times a day
+	Value = 3.0	Label = About once a day
+	Value = 4.0	Label = Several times a week
+	Value = 5.0	Label = Less often
+
+Pos. = 1,340	Variable = gor	Variable label = Region (former Government Office Region)
+This variable is    numeric, the SPSS measurement level is NOMINAL
+	Value label information for gor
+	Value = 1.0	Label = North East
+	Value = 2.0	Label = North West
+	Value = 3.0	Label = Yorkshire and The Humber
+	Value = 4.0	Label = East Midlands
+	Value = 5.0	Label = West Midlands
+	Value = 6.0	Label = East of England
+	Value = 7.0	Label = London
+	Value = 8.0	Label = South East
+	Value = 9.0	Label = South West
+
+Pos. = 1,342	Variable = rur11cat	Variable label = Rural or Urban Area (2011 Census definition)
+This variable is    numeric, the SPSS measurement level is NOMINAL
+	Value label information for rur11cat
+	Value = 1.0	Label = Rural
+	Value = 2.0	Label = Urban
+
+Pos. = 14	Variable = CHILDHH	Variable label = CHILDHH. Children in household
+This variable is    numeric, the SPSS measurement level is SCALE
+SPSS user missing values = -1.7976931348623155e+308 thru -1.0
+	Value label information for CHILDHH
+	Value = -6.0	Label = Numeric response out of range (paper)
+	Value = -5.0	Label = Multi-selected for single response (paper)
+	Value = -4.0	Label = Not answered but should have (paper)
+	Value = -3.0	Label = Not Answered
+	Value = 4.0	Label = 4+
+	Value = 997.0	Label = Prefer not to say
+
+Pos. = 13	Variable = COHAB	Variable label = COHAB. Living as a couple
+This variable is    numeric, the SPSS measurement level is NOMINAL
+SPSS user missing values = -1.7976931348623155e+308 thru -1.0
+	Value label information for COHAB
+	Value = -5.0	Label = Multi-selected for single response (paper)
+	Value = -4.0	Label = Not answered but should have (paper)
+	Value = -3.0	Label = Not Answered
+	Value = 1.0	Label = Yes
+	Value = 2.0	Label = No
+	Value = 997.0	Label = Prefer not to say

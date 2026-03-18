@@ -1,0 +1,12 @@
+Do not add any new content to the notebook in this step.
+Based on the completed notebook results, write a non-technical English report for a government arts department and save it in the workspace as `Report_[agent_name].md`.
+The report should be approximately 400 words and written in markdown format.
+The report should follow a clear high-level structure, but you may organise the wording and emphasis as you judge appropriate:
+- the purpose of the analysis
+- a brief overview of the data and approach
+- the main findings from the modelling results
+- the final model choice and why it was selected
+- the practical implications for public arts engagement
+- key limitations and cautions
+Write for a policy-facing, non-technical audience. Keep the language clear and accessible. Avoid code, formulas, and unnecessary technical jargon. Do not overclaim what the model can do, and do not imply causal conclusions from predictive results alone.
+Use the actual results from the notebook rather than generic placeholder language.

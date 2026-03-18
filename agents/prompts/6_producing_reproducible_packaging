@@ -1,0 +1,8 @@
+Do not add any new content to the notebook in this step.
+In the working directory, create a `requirements.txt` file that includes all Python packages used in the experiment.
+Also create a short `README.md` file that clearly states:
+- which input files are required
+- how to run the notebook
+- what outputs are produced and where they are saved
+- what steps were taken to support reproducibility, such as fixed random seed control
+Keep the packaging concise, clear, and consistent with the workflow implemented in the notebook.

@@ -1,0 +1,16 @@
+Variable,Recode,Drop codes,Rows to drop,Drop rate (%),Rows recoded
+CHERVIS12_NET,None,None,0,0.0,0
+EDUCAT3,{-3: 0},"[-4, -5, 997, 999]",1111,3.24,7128
+NSSEC_3,{-3: 5},None,0,0.0,5101
+FINHARD,{-3: 6},"[-4, -5, 997]",1514,4.41,138
+WELLB1,None,"[-4, -5, 997]",1521,4.43,0
+CINTOFT,{-3: 6},"[-4, -5]",46,0.13,1983
+CSMARTD_Count,{-3: -1},None,0,0.0,2021
+WELLB4,None,"[-4, -5, 997]",1562,4.55,0
+TENHARM,{-3: 4},None,0,0.0,170
+LONELY,None,"[-4, -5, 997]",1262,3.68,0
+ETHNIC_NET,None,"[-3, 997, 999]",1083,3.15,0
+emdidc19,None,None,0,0.0,0
+CULTSATIS,{-3: 6},[999],451,1.31,24325
+SEX,None,"[-4, -5, 997]",638,1.86,0
+AGEBAND,None,"[-3, 997]",606,1.76,0
