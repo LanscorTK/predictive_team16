@@ -53,6 +53,14 @@ All agents followed a fixed 8-step pipeline (see `agents/prompts/`):
 
 Prompts were delivered in fixed order with no agent-specific wording. Manual intervention was restricted to recovering from execution failures.
 
+## How Prompts Were Used
+
+Each agent was first given the following initialisation instruction:
+
+> Act as an SDE to perform a project with me. Your name is [agent_name], so whenever you see [agent_name] in any files you have access to, remember to change that to your name. Your work should only be done in ./agents/[agent_name] and NOWHERE ELSE. Now implement step-by-step following the prompts in ./agents/prompts.
+
+The agent then received the 14 prompt files from `agents/prompts/` one at a time, in filename order (`0_setup`, `1.1_dataset_ingestion_and_schema_checks`, ..., `7_writing_documentation`). Each prompt was copied verbatim into the agent's chat interface. The agent read the prompt, executed the task in its workspace, and the next prompt was sent only after the previous step completed. The `[agent_name]` placeholder in prompts was automatically resolved by the agent based on the initialisation instruction.
+
 ## Reproducing Agent Runs
 
 ```bash
