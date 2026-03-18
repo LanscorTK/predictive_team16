@@ -1,95 +1,64 @@
-# AI Agent Benchmarking for Predictive Analytics
+# Agent Tooling for Data Science — Benchmarking Repository
 
-Benchmarking three AI agents on an end-to-end predictive analytics pipeline, as part of UCL MSIN0097 Predictive Analytics group coursework.
+**Module:** MSIN0097 Predictive Analytics 2025–26 (UCL)
+**Assessment:** Group Coursework — Team 16
 
-## Project Purpose
+## Overview
 
-This project evaluates how AI coding agents perform on realistic data science tasks. Three agents — **Claude Code**, **Codex**, and **Antigravity** — each receive identical prompts from a frozen benchmark protocol and independently complete a full ML pipeline on the same dataset. Their outputs are then compared on correctness, statistical validity, reproducibility, code quality, and efficiency.
+This repository contains the benchmarking harness and agent outputs for a study comparing three AI coding agents on an end-to-end data science pipeline. Each agent received identical prompts and independently completed a full ML workflow — from data ingestion through model selection to reproducible packaging — on the UK Participation Survey 2024–25.
 
-The prediction task uses the UK Participation Survey (2024–25) to classify whether respondents engaged with the arts physically in the last 12 months — framed as an under-engagement identification problem with social policy relevance.
+**Agents compared:** Claude Code (Anthropic), Codex (OpenAI), Antigravity
+
+**Prediction task:** Binary classification of arts engagement (under-engagement identification), using 15 demographic, socioeconomic, and geographic features.
 
 ## Repository Structure
 
 ```
-PA_group/
-├── README.md                 # This file
-├── .gitignore
-├── requirements.txt          # Shared Python dependencies
-├── benchmark_notes.md        # Notes on the benchmark protocol
-│
-├── data/                     # Input data (shared across agents)
+├── data/                          # Shared input data
 │   ├── participation_2024-25_experiment.tab
 │   └── participation_2024-25_data_dictionary_cleaned.txt
 │
-├── docs/                     # Reference documents
-│   ├── MSIN0097_ Predictive Analytics 25-26 Group Coursework.pdf
-│   └── Pipeline_260316.docx  # Frozen benchmark protocol
+├── agents/
+│   ├── prompts/                   # Frozen prompt protocol (14 steps)
+│   ├── claude_code/               # Agent workspace + evidence
+│   ├── codex/                     # Agent workspace + evidence
+│   └── antigravity/               # Agent workspace + evidence
 │
-├── agents/                   # One workspace per agent
-│   ├── claude_code/
-│   ├── codex/
-│   └── antigravity/
-│
-├── outputs/                  # Cross-agent comparison outputs
-└── logs/                     # Benchmark-level logs
+├── requirements.txt               # Shared Python dependencies
+└── .gitignore
 ```
 
-Each agent works inside its own `agents/<name>/` folder. During execution, each agent will create:
-- `experiment_<agent>.ipynb` — the main analysis notebook
-- `run_log_<agent>.md` — step-by-step progress log
-- `evidence_<agent>/` — saved outputs, figures, and artifacts
-- `Report_<agent>.md` — non-technical summary report
-- `requirements.txt` and `README.md` — agent-specific packaging
+Each agent workspace contains:
+- `experiment_<agent>.ipynb` — main analysis notebook
+- `build_notebook.py` — notebook construction script
+- `run_log_<agent>.md` — step-by-step execution log
+- `evidence_<agent>/` — saved metrics (CSVs/JSONs), EDA plots (PNGs)
+- `Report_<agent>.md` — non-technical policy report
+- `README.md` and `requirements.txt` — agent-specific reproducibility docs
 
-## Input Files
+## Benchmark Protocol
 
-| File | Description |
-|------|-------------|
-| `participation_2024-25_experiment.tab` | Subset of the UK Participation Survey with 11 variables (1 target + 10 features) |
-| `participation_2024-25_data_dictionary_cleaned.txt` | Variable dictionary with coded values and labels |
-
-## Benchmark Pipeline (Steps 0–7)
-
-The pipeline is defined in `docs/Pipeline_260316.docx`. Each agent follows the same sequence:
+All agents followed a fixed 8-step pipeline (see `agents/prompts/`):
 
 | Step | Task |
 |------|------|
-| 0 | Setup — create notebook, set seed=42, initialise logging |
-| 1 | Dataset ingestion + schema checks + problem definition |
-| 2 | EDA and insight generation (with plots) |
+| 0 | Setup: notebook, seed=42, logging |
+| 1 | Dataset ingestion, schema checks, problem definition |
+| 2 | Exploratory data analysis with visualisations |
 | 3 | Missingness handling |
-| 4 | Baseline model training (Logistic Regression) + evaluation harness |
-| 5 | Improving performance (tuning LR + XGBoost, final comparison) |
-| 6 | Producing reproducible packaging (requirements.txt, README) |
-| 7 | Writing documentation (non-technical report) |
+| 4 | Baseline logistic regression + evaluation harness |
+| 5 | Hyperparameter tuning (LR + XGBoost), model comparison on test set |
+| 6 | Reproducible packaging |
+| 7 | Non-technical documentation |
 
-## How to Run the Benchmark
+Prompts were delivered in fixed order with no agent-specific wording. Manual intervention was restricted to recovering from execution failures.
 
-1. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Reproducing Agent Runs
 
-2. **For each agent** (claude_code, codex, antigravity):
-   - Navigate to the agent's workspace: `cd agents/<agent_name>/`
-   - Copy or symlink the data files so they are accessible from the working directory
-   - Follow the prompts in `docs/Pipeline_260316.docx` step by step (Steps 0–7)
-   - Each prompt is given to the agent verbatim; no manual intervention unless errors occur
+```bash
+pip install -r requirements.txt
+cd agents/<agent_name>/
+jupyter nbconvert --to notebook --execute experiment_<agent_name>.ipynb
+```
 
-3. **After all agents complete:**
-   - Compare outputs across agents using the evaluation criteria from the pipeline document
-   - Save comparison tables and figures to `outputs/`
-
-## Agents Compared
-
-| Agent | Description |
-|-------|-------------|
-| Claude Code | Anthropic's CLI coding agent |
-| Codex | OpenAI's coding agent |
-| Antigravity | AI coding agent |
-
-## Notes
-
-- See `benchmark_notes.md` for protocol constraints.
-- The pipeline document is the authoritative benchmark specification — do not deviate from it.
-- Random seed is fixed at 42 for all agents to support reproducibility.
+All notebooks use `random_state=42` and relative paths. See each agent's `README.md` for agent-specific instructions.
